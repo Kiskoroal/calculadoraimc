@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora IMC con JS</title>
+    <style>
+      *{
+        margin: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .inputcontenedor {
+        display: inline-flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+      h1 {
+        color: rgb(0, 84, 253);
+        font-style: italic;
+      }
+
+      .inputs {
+        margin-top: 60px;
+        font-size: 20px;
+        height: 40px;
+      }
+
+      .inputcontenedor textarea {
+        height: 100px;
+        width: 300px;
+        resize: none;
+      }
+
+      .inputcontenedor .btn {
+        background: rgb(0, 121, 154);
+        color: white;
+        border-radius: 10px;
+        border-style: none;
+      }
+
+      .inputcontenedor .btn:hover {
+        cursor: pointer;
+        background: rgba(0, 121, 154, .75);
+      }
+
+      .inputcontenedor  .inputs{
+        border: none;
+        border-bottom: 2.5px solid rgb(0, 121, 154);
+        padding: 5px;
+      }
+
+      .inputcontenedor .inputs:focus {
+        border-bottom: 2.5px solid rgb(0, 76, 190);
+        outline: none;
+      }
+    </style>
+    <body>
+        <div class="container">
+                 <h1>Calculadora IMC con JavaScript</h1>
+            <div class="inputcontenedor">  
+                 <input type="text" class="inputs" id="peso" placeholder="Introduzca su peso en kg" required>
+                 <input type="text" class="inputs" id="altura" placeholder="Introduzca su altura en cm" required>
+                 <textarea class="inputs" id="resultado"  placeholder="Resultado" readonly></textarea>
+                 <button class="inputs btn" id="btn" onclick="window.location.reload();">Calcular IMC</button>           
+            </div>   
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
